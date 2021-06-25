@@ -19,6 +19,34 @@ videoInput.onchange = (event) => {
   video.load();
 };
 
+const featureRotatorButton = document.createElement("button");
+featureRotatorButton.classList.add("overlayButton");
+featureRotatorButton.textContent = "Feature Rotator";
+featureRotatorButton.onclick = () => {
+  if (lastOverlay) {
+    overlay.removeChild(lastOverlay);
+  }
+  const rotatorPng = document.createElement("img");
+  rotatorPng.src = "./assets/FeatureRotator.png";
+  overlay.appendChild(rotatorPng);
+  lastOverlay = rotatorPng;
+};
+overlayButtons.appendChild(featureRotatorButton);
+
+const wakeScreenButton = document.createElement("button");
+wakeScreenButton.classList.add("overlayButton");
+wakeScreenButton.textContent = "Wake Screen";
+wakeScreenButton.onclick = () => {
+  if (lastOverlay) {
+    overlay.removeChild(lastOverlay);
+  }
+  const wakePng = document.createElement("img");
+  wakePng.src = "./assets/WakeScreen.png";
+  overlay.appendChild(wakePng);
+  lastOverlay = wakePng;
+};
+overlayButtons.appendChild(wakeScreenButton);
+
 psdInput.onchange = async (event) => {
   if (lastOverlay) {
     overlay.removeChild(lastOverlay);
