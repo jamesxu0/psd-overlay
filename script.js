@@ -41,7 +41,7 @@ wakeScreenButton.onclick = () => {
     overlay.removeChild(lastOverlay);
   }
   const wakePng = document.createElement("img");
-  wakePng.src = "./assets/WakeScreen.png";
+  wakePng.src = "./assets/Wakescreen.png";
   overlay.appendChild(wakePng);
   lastOverlay = wakePng;
 };
